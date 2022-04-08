@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page1</title>
+    <script>
+        var o = { text : "No" } ,
+            a = [1 , 15 , 5 , o, " Welt ", 5 , " Tiger ", " Hallo ", " Welt ", { text : "!" } , { text : "!" } , o];
+            zwischenspeicher = [];
+        // removeDuplicates Methode ruft uniqBy Methode auf und übergibt das Array a
+        // funktioniert auch für Zahlen
+        function removeDuplicates(a) {
+            b = uniqBy(a, JSON.stringify)
+            zwischenspeicher.push(b);
+            return b;
+        }
+        // Schlüssel Callback (funktioniert auch für Hash Werte) -> Objekte mit gleichen Schlüsseln werden entfernt
+        // Key = JSON.stringify
+        // JSON.stringify speichert den Inhalt in einen String, egal welcher Datentyp es davor ist
+        function uniqBy(a, key) {
+            var seen = {};
+            return a.filter(function(item) {
+                var k = key(item);
+
+                return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+            })
+        }
+        // ruft removeDuplicates auf welches wiederum uniqBy aufruft
+        console.log (removeDuplicates (a)) ;
+        // Zwischenspeicher für Arrays
+        console.log(zwischenspeicher);
+
+    </script>
+</head>
+<body>
+<h1>Single Page Webanwendungen</h1>
+Ausgabe der Übungen: Siehe "untersuchen" und dann "Console"
+</body>
+</html>

@@ -1,3 +1,5 @@
+// Aufgabenblatt 1
+
 // Inhalt der page1 und page2 in Variablen gespeichert
 let page1content = "<p> Test: Hier geht es zur nächsten Seite </p> <a onclick=\"navTo('./page2.html')\" </a>";
 let page2content = "<p> Test: Hier geht es zurück zur Startseite </p> <a onclick=\"navTo('./page1.html')\" </a>";
