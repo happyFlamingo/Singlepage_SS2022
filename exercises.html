@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>page1</title>
     <script>
+        console.time("Ladezeit");
         var o = { text : "No" } ,
             a = [1 , 15 , 5 , o, " Welt ", 5 , " Tiger ", " Hallo ", " Welt ", { text : "!" } , { text : "!" } , o];
             zwischenspeicher = [];
@@ -26,10 +27,21 @@
             })
         }
         // ruft removeDuplicates auf welches wiederum uniqBy aufruft
-        console.log (removeDuplicates (a)) ;
+        console.log (removeDuplicates (a));
         // Zwischenspeicher für Arrays
         console.log(zwischenspeicher);
+        // Zeitausgabe für ersten Aufgabenteil
+        // console.timeEnd("Ladezeit"); // Ladezeit zwischen 0.4-0.8 ms
 
+        // Array mit random 100.000 Zahlen
+        let randomArray = [];
+        while(randomArray.length < 100){ // alles ab <1.000 läd nicht mehr
+            let r = Math.floor(Math.random() * 100) + 1;
+            if(randomArray.indexOf(r) === -1) randomArray.push(r);
+        }
+        console.log (removeDuplicates (randomArray)) ;
+        // Zeitausgabe für den letzten Ausgabeteil
+        console.timeEnd("Ladezeit"); // Ladezeit fürs randomArray ca. 0.9
     </script>
 </head>
 <body>
