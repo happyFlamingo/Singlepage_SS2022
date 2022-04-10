@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>person</title>
+    <script>
+        personenListe = [];
+
+        // neue Person erstellen
+        var p = new Person (" Phillip ", " Heidegger ");
+
+        function Person (name , surname ) {
+            // Ausgabe des Vor- und Nachnamens
+            this.getFullName = function () {
+                return name + " " + surname ;
+            }
+            // Person ins Array hinzufügen
+            this.addPerson = function () {
+                personenListe.push(p);
+                console.log(personenListe);
+            }
+            // Angaben der Person ändern
+            this.changeName = function (name, surname){
+                // geht Array durch, vergleicht Inhalt pro Stelle mit Hilfe der Variable i und ersetzt sie dann durch p
+                personenListe.forEach(function(item, i)
+                    { if (item === name || item === surname) personenListe[i] = (p);}
+                )
+                console.log(personenListe);
+            }
+        }
+        p.addPerson();
+        p.changeName("Heidegger", "Heidegger");
+        console.log (p. getFullName()) ;
+
+    </script>
+</head>
+<body>
+<h1>Single Page Webanwendungen</h1>
+Ausgabe A 2.3: Funktionen und Objekte in JavaScript: Siehe "untersuchen" und dann "Console"
+</body>
+</html>
