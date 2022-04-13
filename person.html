@@ -4,33 +4,51 @@
     <meta charset="UTF-8">
     <title>person</title>
     <script>
+        // Array erstellen um Personen zu verwalten / zu sammeln
         personenListe = [];
-
         // neue Person erstellen
-        var p = new Person (" Phillip ", " Heidegger ");
+        let p = new Person (" Phillip ", " Heidegger ");
 
-        function Person (name , surname ) {
+        function Person (name , surname) {
             // Ausgabe des Vor- und Nachnamens
             this.getFullName = function () {
+                console.log("GetFullName Funktion");
                 return name + " " + surname ;
             }
             // Person ins Array hinzufügen
             this.addPerson = function () {
                 personenListe.push(p);
-                console.log(personenListe);
+                console.log("addPerson Funktion");
+                return p;
             }
-            // Angaben der Person ändern
+            // Angaben der Person ändern,
             this.changeName = function (name, surname){
                 // geht Array durch, vergleicht Inhalt pro Stelle mit Hilfe der Variable i und ersetzt sie dann durch p
                 personenListe.forEach(function(item, i)
-                    { if (item === name || item === surname) personenListe[i] = (p);}
+                    { if (item === surname || item === name) personenListe[i] = [p]; console.log("changeName Funktion");}
                 )
-                console.log(personenListe);
+                return name + " " + surname ;
+            }
+            // Vergleich Nachname
+            this.compareSurname = function (name, surname){
+                personenListe.forEach(function(item){
+                if (item === surname) return "gleicher Nachname";}
+                )
+                return "ungleicher Nachname";
+            }
+            // Vergleich Vorname
+            this.compareName = function (name){
+                personenListe.forEach(function(item)
+                    { if (item === name) return "gleicher Vorname";}
+                )
+                return "ungleicher Vorname";
             }
         }
-        p.addPerson();
-        p.changeName("Heidegger", "Heidegger");
-        console.log (p. getFullName()) ;
+        console.log (p.getFullName());
+        console.log (p.addPerson());
+        console.log (p.changeName(" Cornelia ", " Heidegger "));
+        console.log (p.compareName("Cornelia", "Mueller")); // true
+        console.log (p.compareSurname("Cornelia", "Mueller"));
 
     </script>
 </head>
