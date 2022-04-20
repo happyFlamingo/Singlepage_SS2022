@@ -6,11 +6,19 @@
     <script>
         let s = " Dies ist ein normaler String: ";
         let m = " Dies ist mein zweiter String: ";
+        let p = {String: "String für Objekt-Variante:"}
+        // const p = new String("String für new Objekt-Variante");
+
         function pear(s) {
             return s + ((3 * 12) + 6.0) + " Birnen.";
         }
+
+        p.pear = 3 * 12 + 6.0 + " Birnen .";
+
         console.log(pear(s));
         console.log(pear(m));
+        console.log(p.pear) ;
+
     </script>
 </head>
 <body>
