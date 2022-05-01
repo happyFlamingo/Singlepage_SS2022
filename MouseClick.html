@@ -12,7 +12,7 @@
             font-size: 20px;
             font-weight: 400;
         }
-        section {
+        div {
             display: -webkit-inline-flex;
             height: 250px;
             width: 250px;
@@ -41,9 +41,9 @@ oberen Ecke des Zeichendivs an.<br>
 hinzu, die ebenfalls unterhalb der Zeichenfläche dargestellt wird.<br>
 <br>
 <br>
-<section>
+<div id="div1" onclick="add()">
     <s> Zeichenfläche </s>
-</section>
+</div>
 <br>
 <br>
 <h2>Maus Koordinaten</h2>
@@ -57,5 +57,10 @@ hinzu, die ebenfalls unterhalb der Zeichenfläche dargestellt wird.<br>
 </script>
 
 <br>
+
+<h2>Punkteliste</h2>
+<h4>Klicke auf die Zeichenfläche und füge der Liste einen (weiteren) Eintrag hinzu</h4>
+<ul id="myList"></ul>
+<script src="MouseClick.js"></script>
 </body>
 </html>
