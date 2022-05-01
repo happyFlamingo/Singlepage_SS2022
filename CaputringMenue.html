@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Capturing Menue</title>
+    <title>Capturing Menü</title>
+    <style>
+        body {
+            font-family: Calibri;
+        }
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+    </style>
 </head>
-<body>
-<h1>Single Page Webanwendungen - Menue mit Capturing Phase</h1>
+<body id="body" onclick="registerMenu()">
+<h1>Single Page Webanwendungen - Menü mit Capturing Phase</h1>
 Erstellen Sie ein Funktion registerMenu, der Sie ein DOM Element übergeben können,<br>
 und dass auf diesem dann einen Klick Handler registriert. Wenn das entsprechende<br>
 DOM Element angeklickt wird, zeigt der registrierte Klick Handler ein Menü an der<br>
@@ -18,5 +31,14 @@ wird geschlossen. Wird auf eine beliebige Stelle außerhalb des Menüs geklickt,
 Menü geschlossen werden. Der Klick soll abgefangen werden, so dass durch diesen<br>
 nicht mehrere Effekte erzieht werden. Verlässt die Maus das Browserfenster, soll das<br>
 Menü ebenfalls geschlossen werden.<br>
+<br>
+<br>
+<div class="buttons" id="button" onclick="test()">
+    <button>Zeige das tierisch gute Menü an :)</button>
+</div>
+<br>
+<br>
+<script src="capturingMenue.js"></script>
+
 </body>
 </html>
