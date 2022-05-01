@@ -1,16 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Mouse Click</title>
+    <style>
+        body {
+            font-family: Calibri;
+        }
+        .sample {
+            font-family: Calibri;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        section {
+            display: flex;
+            display: -webkit-flex;
+            height: 250px;
+            width: 250px;
+            margin: auto;
+            border-radius: 20px;
+            border: 3px solid black;
+            background-color: lightslategray;
+        }
+        s {
+            font-family: Calibri;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
-<h1>Single Page Webanwendungen - Mouse Click</h1>
-•  Erstellen Sie eine HTML Seite auf der ein DIV mit einer grauen Hintergrundfarbe als Zeichenfläche sichtbar ist. Die Zeichenfläche soll eine Hoehe und Breite von
+<h1>Event Handler - Mouse Click/Move</h1>
+• Erstellen Sie eine HTML Seite auf der ein DIV mit einer grauen Hintergrundfarbe
+als Zeichenfläche sichtbar ist. Die Zeichenfläche soll eine Höhe und Breite von
 250px erhalten.<br>
-• Immer wenn Sie auf dieser Fläche Ihre Maus bewegen, zeigen Sie in einem Bereich unterhalb der Fläche die Koordinaten des Mauszeigers relativ zur linken
+• Immer wenn Sie auf dieser Fläche Ihre Maus bewegen, zeigen Sie in einem Bereich unterhalb der Fläche die Koordinaten des Mauszeigers relativ zur linken
 oberen Ecke des Zeichendivs an.<br>
 • Wenn Sie auf die Fläche Klicken, fügen Sie einen Eintrag zu einer Punkteliste
 hinzu, die ebenfalls unterhalb der Zeichenfläche dargestellt wird.<br>
+<br>
+<h2>Maus Koordinaten</h2>
+<h4>Bewege die Maus über die Zeichenfläche, um die x- und y-Koordinaten der Maus zu erhalten</h4>
+<p class="sample"></p>
+<script>
+    let sampleEle = document.querySelector(".sample");
+    document.body.addEventListener("mousemove", (event) => {
+        sampleEle.innerHTML = "X-Achse: " + event.x + " Y-Achse: " + event.y;
+    });
+</script>
+<br>
+<section>
+    <s> Zeichenfläche </s>
+</section>
+<br>
 </body>
 </html>
