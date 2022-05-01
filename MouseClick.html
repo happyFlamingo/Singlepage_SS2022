@@ -13,8 +13,7 @@
             font-weight: 400;
         }
         section {
-            display: flex;
-            display: -webkit-flex;
+            display: -webkit-inline-flex;
             height: 250px;
             width: 250px;
             margin: auto;
@@ -36,10 +35,16 @@
 • Erstellen Sie eine HTML Seite auf der ein DIV mit einer grauen Hintergrundfarbe
 als Zeichenfläche sichtbar ist. Die Zeichenfläche soll eine Höhe und Breite von
 250px erhalten.<br>
-• Immer wenn Sie auf dieser Fläche Ihre Maus bewegen, zeigen Sie in einem Bereich unterhalb der Fläche die Koordinaten des Mauszeigers relativ zur linken
+• Immer wenn Sie auf dieser Fläche Ihre Maus bewegen, zeigen Sie in einem Bereich unterhalb der Fläche die Koordinaten des Mauszeigers relativ zur linken
 oberen Ecke des Zeichendivs an.<br>
 • Wenn Sie auf die Fläche Klicken, fügen Sie einen Eintrag zu einer Punkteliste
 hinzu, die ebenfalls unterhalb der Zeichenfläche dargestellt wird.<br>
+<br>
+<br>
+<section>
+    <s> Zeichenfläche </s>
+</section>
+<br>
 <br>
 <h2>Maus Koordinaten</h2>
 <h4>Bewege die Maus über die Zeichenfläche, um die x- und y-Koordinaten der Maus zu erhalten</h4>
@@ -50,10 +55,7 @@ hinzu, die ebenfalls unterhalb der Zeichenfläche dargestellt wird.<br>
         sampleEle.innerHTML = "X-Achse: " + event.x + " Y-Achse: " + event.y;
     });
 </script>
-<br>
-<section>
-    <s> Zeichenfläche </s>
-</section>
+
 <br>
 </body>
 </html>
